@@ -22,8 +22,12 @@
 /datum/job/antag/xenos/spawn_in_player(mob/new_player/NP)
 	. = ..()
 	var/mob/living/carbon/human/H = .
+	var/hivenumber = XENO_HIVE_NORMAL
 
-	transform_to_xeno(H, XENO_HIVE_NORMAL)
+	if(SShijack.hijack_status == HIJACK_OBJECTIVES_SHIP_INBOUND)
+		hivenumber = XENO_HIVE_FORSAKEN //Set to forsaken hive if hijack is active
+
+	transform_to_xeno(H, hivenumber)
 
 /datum/job/antag/xenos/proc/transform_to_xeno(mob/living/carbon/human/human_to_transform, hive_index)
 	var/datum/mind/new_xeno = human_to_transform.mind

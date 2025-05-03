@@ -339,6 +339,7 @@
 	var/turf/source_turf = get_turf(src)
 	var/obj/docking_port/mobile/marine_dropship/dropship = SSshuttle.getShuttle(shuttleId)
 	var/result = tgui_input_list(user, "Where to 'land'?", "Dropship Hijack", GLOB.almayer_ship_sections , timeout = 10 SECONDS)
+	SShijack.call_shuttle()
 	if(!result)
 		return
 	if(!user.Adjacent(source_turf) && !force)
