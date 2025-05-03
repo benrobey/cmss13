@@ -24,7 +24,7 @@
 	var/mob/living/carbon/human/H = .
 	var/hivenumber = XENO_HIVE_NORMAL
 
-	if(SShijack.hijack_status == HIJACK_OBJECTIVES_SHIP_INBOUND)
+	if(SShijack.hijack_status != HIJACK_OBJECTIVES_NOT_STARTED)
 		hivenumber = XENO_HIVE_FORSAKEN //Set to forsaken hive if hijack is active
 
 	transform_to_xeno(H, hivenumber)
