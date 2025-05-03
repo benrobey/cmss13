@@ -842,6 +842,8 @@
 	if(isnull(new_xeno))
 		return FALSE
 
+	//check somewhere here to spawn forsaken larva if spawning on planet and hijack started
+
 	if(!SSticker.mode.transfer_xeno(xeno_candidate, new_xeno))
 		qdel(new_xeno)
 		return FALSE

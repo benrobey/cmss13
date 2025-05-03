@@ -238,8 +238,11 @@
 							message_alien_candidates(candidates, dequeued = 0)
 							break
 
+	// need code here to set it to forsaken
+
 	// Spawn the larva
 	var/mob/living/carbon/xenomorph/larva/new_xeno
+	new_xeno.hivenumber = XENO_HIVE_FORSAKEN
 
 	if(isyautja(affected_mob) || (flags_embryo & FLAG_EMBRYO_PREDATOR))
 		new_xeno = new /mob/living/carbon/xenomorph/larva/predalien(affected_mob)
