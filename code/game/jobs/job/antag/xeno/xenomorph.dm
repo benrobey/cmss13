@@ -26,8 +26,8 @@
 
 	if(SShijack.hijack_status != HIJACK_OBJECTIVES_NOT_STARTED)
 		hivenumber = XENO_HIVE_FORSAKEN //Set to forsaken hive if hijack is active
-
-	transform_to_xeno(H, hivenumber)
+	// set_hive_and_update maybe use this??
+	transform_to_xeno(H, XENO_HIVE_FORSAKEN)
 
 /datum/job/antag/xenos/proc/transform_to_xeno(mob/living/carbon/human/human_to_transform, hive_index)
 	var/datum/mind/new_xeno = human_to_transform.mind
@@ -86,6 +86,7 @@
 			start_nest.dir = NORTH
 			break
 
+is_ground_level(start_nest)
 	human_to_transform.statistic_exempt = TRUE
 	human_to_transform.set_buckled(start_nest)
 	human_to_transform.setDir(start_nest.dir)
