@@ -309,7 +309,7 @@
 
 /obj/effect/alien/resin/special/pylon/core/proc/spawn_burrowed_larva(mob/xeno_candidate)
 	if(can_spawn_larva() && xeno_candidate)
-		var/mob/living/carbon/xenomorph/larva/new_xeno = spawn_hivenumber_larva(loc, linked_hive.hivenumber)
+		var/mob/living/carbon/xenomorph/larva/new_xeno = spawn_hivenumber_larva(loc, XENO_HIVE_FORSAKEN) // set a variable above this that stores either this hive number OR forsaken hivenumber if the core is on the ground after hijack
 		if(isnull(new_xeno))
 			return FALSE
 

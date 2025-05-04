@@ -173,7 +173,9 @@
 
 	var/mob/living/carbon/xenomorph/larva/larva = new /mob/living/carbon/xenomorph/larva(atom)
 
-	larva.set_hive_and_update(hivenumber)
+	//Check if larva on ground after hijack and set to forsaken hive
+
+	larva.set_hive_and_update(XENO_HIVE_FORSAKEN)
 
 	return larva
 

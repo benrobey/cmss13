@@ -8,7 +8,7 @@
 	var/mob/living/affected_mob
 	var/stage = 0
 	var/counter = 0 //How developed the embryo is, if it ages up highly enough it has a chance to burst
-	var/larva_autoburst_countdown = 20 //to kick the larva out
+	var/larva_autoburst_countdown = 1 //to kick the larva out
 	var/hivenumber = XENO_HIVE_NORMAL
 	var/faction = FACTION_XENOMORPH
 	var/flags_embryo = FALSE // Used in /ciphering/predator property
